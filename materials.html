@@ -39,19 +39,13 @@
 
     <div class="d-flex align-items-center justify-content-between">
       <a href="index.html" class="logo d-flex align-items-center">
-        <img src="assets/img/logo.png" alt="">
-        <span class="d-none d-lg-block">GMS</span>
+          <img src="assets/img/fitness.png" alt="">
+          <span class="d-none d-lg-block">GymManagement</span>
       </a>
       <i class="bi bi-list toggle-sidebar-btn"></i>
-    </div><!-- End Logo -->
+    </div>
 
-    <div class="search-bar">
-      <form class="search-form d-flex align-items-center" method="POST" action="#">
-        <input type="text" name="query" placeholder="Search" title="Enter search keyword">
-        <button type="submit" title="Search"><i class="bi bi-search"></i></button>
-      </form>
-    </div><!-- End Search Bar -->
-
+   
     <nav class="header-nav ms-auto">
       <ul class="d-flex align-items-center">
 
@@ -209,22 +203,22 @@
         </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link collapsed" data-bs-target="#tables-nav" data-bs-toggle="collapse" href="#">
+        <a class="nav-link collapsed" href="Users.html">
           <i class="bi bi-people"></i><span>Users</span>
         </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link collapsed" data-bs-target="#tables-nav" data-bs-toggle="collapse" href="#">
+        <a class="nav-link collapsed"  href="index.html">
           <i class="bi bi-currency-dollar"></i><span>Abonnement</span>
         </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link " data-bs-target="#tables-nav" data-bs-toggle="collapse" href="#" class="active">
+        <a class="nav-link" href="#" class="active">
           <i class="bx bx-dumbbell"></i><span>Material</span>
         </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link collapsed" data-bs-target="#tables-nav" data-bs-toggle="collapse" href="#">
+        <a class="nav-link collapsed" href="#">
           <i class="bi bi-gear"></i><span>Settings</span>
         </a>
       </li>
@@ -234,6 +228,15 @@
   </aside><!-- End Sidebar-->
 
   <main id="main" class="main">
+    <div class="pagetitle">
+      <h1> Material </h1>
+      <nav>
+          <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="#">Home</a></li>
+              <li class="breadcrumb-item active">Material </li>
+          </ol>
+      </nav>
+  </div>
     <section class="section dashboard">
       <div class="row">
         <div class="col-lg-12">
@@ -241,156 +244,176 @@
 
             <div class="col-12">
               <div class="card top-selling overflow-auto">
-                <div class="card-body pb-0">
+                <div class="card-body pb-0" >
                   <h5 class="card-title">Materials</h5>
-                  <button type="button" id="add" class="btn btn-outline-dark" class="datatable-top">
+                  <button type="button" id="add" class="btn btn-outline-dark" class="datatable-top" data-bs-toggle="modal" data-bs-target="#addmaterial">
                     <i class="bi bi-plus-square"></i>
                   </button>
+                  <div class="modal fade" id="addmaterial" tabindex="-1">
+                    <div class="modal-dialog modal-dialog-centered">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title">Add new Material</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <form action="">
+                          <div class="modal-body">
+                              <div class="col-md-12">
+                                <label for="inputName5" class="form-label">Name</label>
+                                <input type="text" class="form-control" id="inputName1">
+                              </div>
+                              <div class="col-md-12">
+                                <label for="inputName5" class="form-label">Number</label>
+                                <input type="number" class="form-control" id="inputNumber">
+                              </div>
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                            <button type="reset" class="btn btn-secondary">Reset</button>
+                            <button type="submit" class="btn btn-success">Add</button>
+                          </div>
+                      </form>
+                      </div>
+                    </div>
+                  </div>
                   <table class="table datatable">
                     <thead>
-                      <tr>
+                      <tr class="table-primary">
                         <th scope="col">Preview</th>
                         <th scope="col">Name</th>
                         <th scope="col">Number</th>
                         <th scope="col">Edit</th>
+                        <th scope="col">Delete</th>
                       </tr>
                     </thead>
                     <tbody>
                       <tr>
                         <th scope="row"><a href="#"><img src="assets/img/product1.png" alt=""></a></th>
                         <td><a href="#" class="text-dark fw-bold">Dumbbells</a></td>
-                        <td>14</td>
+                        <td><strong>14</strong></td>
                         <td>
-                          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#verticalycentered">
-                             <i class="bi bi-pencil-square"></i>
+                          <button type="button" class="btn btn-primary btn-tab" data-bs-toggle="modal" data-bs-target="#verticalycentered">
+                            <i class="bi bi-pencil text-primary"></i>
                           </button>
                           <div class="modal fade" id="verticalycentered" tabindex="-1">
                             <div class="modal-dialog modal-dialog-centered">
                               <div class="modal-content">
                                 <div class="modal-header">
-                                  <h5 class="modal-title">Vertically Centered</h5>
+                                  <h5 class="modal-title">Dumbbells</h5>
                                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                 </div>
-                                <div class="modal-body">
-                                  Non omnis incidunt qui sed occaecati magni asperiores est mollitia. Soluta at et reprehenderit. Placeat autem numquam et fuga numquam. Tempora in facere consequatur sit dolor ipsum. Consequatur nemo amet incidunt est facilis. Dolorem neque recusandae quo sit molestias sint dignissimos.
-                                </div>
-                                <div class="modal-footer">
-                                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                  <button type="button" class="btn btn-primary">Save changes</button>
-                                </div>
+                                <form action="">
+                                  <div class="modal-body">
+                                      <div class="col-md-12">
+                                        <label for="inputName5" class="form-label">Name</label>
+                                        <input type="text" class="form-control" id="inputName1" value="Dumbbells">
+                                      </div>
+                                      <div class="col-md-12">
+                                        <label for="inputName5" class="form-label">Number</label>
+                                        <input type="number" class="form-control" id="inputNumber" value="14">
+                                      </div>
+                                  </div>
+                                  <div class="modal-footer">
+                                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                                    <button type="reset" class="btn btn-secondary">Reset</button>
+                                    <button type="submit" class="btn btn-success">Save changes</button>
+                                  </div>
+                              </form>
                               </div>
                             </div>
                           </div>
+                        </td>
+                        <td>
+                          <button type="button" class="btn btn-primary btn-tab">
+                            <i class="bi bi-trash text-danger"></i>
+                          </button>
                         </td>
                       </tr>
                       <tr>
                         <th scope="row"><a href="#"><img src="assets/img/product2.png" alt=""></a></th>
                         <td><a href="#" class="text-dark fw-bold">Kettlebell</a></td>
-                        <td>16</td>
+                        <td><strong>16</strong></td>
                         <td>
-                          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#verticalycentered">
-                            <i class="bi bi-pencil-square"></i>
+                          <button type="button" class="btn btn-primary btn-tab" data-bs-toggle="modal" data-bs-target="#verticalycentered2">
+                            <i class="bi bi-pencil text-primary"></i>
                           </button>
-                          <div class="modal fade" id="verticalycentered" tabindex="-1">
+                          <div class="modal fade" id="verticalycentered2" tabindex="-1">
                             <div class="modal-dialog modal-dialog-centered">
                               <div class="modal-content">
                                 <div class="modal-header">
-                                  <h5 class="modal-title">Vertically Centered</h5>
+                                  <h5 class="modal-title">Kettlebell</h5>
                                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                 </div>
-                                <div class="modal-body">
-                                  Non omnis incidunt qui sed occaecati magni asperiores est mollitia. Soluta at et reprehenderit. Placeat autem numquam et fuga numquam. Tempora in facere consequatur sit dolor ipsum. Consequatur nemo amet incidunt est facilis. Dolorem neque recusandae quo sit molestias sint dignissimos.
-                                </div>
-                                <div class="modal-footer">
-                                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                  <button type="button" class="btn btn-primary">Save changes</button>
-                                </div>
+                                <form action="">
+                                  <div class="modal-body">
+                                      <div class="col-md-12">
+                                        <label for="inputName5" class="form-label">Name</label>
+                                        <input type="text" class="form-control" id="inputName1"  value="Kettlebell">
+                                      </div>
+                                      <div class="col-md-12">
+                                        <label for="inputName5" class="form-label">Number</label>
+                                        <input type="number" class="form-control" id="inputNumber" value="16">
+                                      </div>
+                                  </div>
+                                  <div class="modal-footer">
+                                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                                    <button type="reset" class="btn btn-secondary">Reset</button>
+                                    <button type="submit" class="btn btn-success">Save changes</button>
+                                  </div>
+                              </form>
                               </div>
                             </div>
                           </div>
                         </td>
+                        <td>
+                          <button type="button" class="btn btn-primary btn-tab">
+                            <i class="bi bi-trash text-danger"></i>
+                          </button>
+                        </td>
                       </tr>
                       <tr>
-                        <th scope="row"><a href="#"><img src="assets/img/product3.png" alt=""></a></th>
+                        <th scope="row"><a href="#"><img  src="assets/img/product3.png" alt=""></a></th>
                         <td><a href="#" class="text-dark fw-bold">Treadmill</a></td>
-                        <td>59</td>
+                        <td><strong>15</strong></td>
                         <td>
-                          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#verticalycentered">
-                            <i class="bi bi-pencil-square"></i>
+                          <button type="button" class="btn btn-primary btn-tab" data-bs-toggle="modal" data-bs-target="#verticalycentered3">
+                            <i class="bi bi-pencil text-primary"></i>
                           </button>
-                          <div class="modal fade" id="verticalycentered" tabindex="-1">
+                          <div class="modal fade" id="verticalycentered3" tabindex="-1">
                             <div class="modal-dialog modal-dialog-centered">
                               <div class="modal-content">
                                 <div class="modal-header">
-                                  <h5 class="modal-title">Vertically Centered</h5>
+                                  <h5 class="modal-title">Treadmill</h5>
                                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                 </div>
-                                <div class="modal-body">
-                                  Non omnis incidunt qui sed occaecati magni asperiores est mollitia. Soluta at et reprehenderit. Placeat autem numquam et fuga numquam. Tempora in facere consequatur sit dolor ipsum. Consequatur nemo amet incidunt est facilis. Dolorem neque recusandae quo sit molestias sint dignissimos.
-                                </div>
-                                <div class="modal-footer">
-                                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                  <button type="button" class="btn btn-primary">Save changes</button>
-                                </div>
+                                <form action="">
+                                  <div class="modal-body">
+                                      <div class="col-md-12">
+                                        <label for="inputName5" class="form-label">Name</label>
+                                        <input type="text" class="form-control" id="inputName1"  value="Treadmill">
+                                      </div>
+                                      <div class="col-md-12">
+                                        <label for="inputName5" class="form-label">Number</label>
+                                        <input type="number" class="form-control" id="inputNumber" value="15">
+                                      </div>
+                                  </div>
+                                  <div class="modal-footer">
+                                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                                    <button type="reset" class="btn btn-secondary">Reset</button>
+                                    <button type="submit" class="btn btn-success">Save changes</button>
+                                  </div>
+                              </form>
                               </div>
                             </div>
                           </div>
                         </td>
-                      </tr>
-                      <tr>
-                        <th scope="row"><a href="#"><img src="assets/img/product-4.jpg" alt=""></a></th>
-                        <td><a href="#" class="text-dark fw-bold">Officiis quaerat sint rerum error</a></td>
-                        <td>32</td>
                         <td>
-                          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#verticalycentered">
-                            <i class="bi bi-pencil-square"></i>
+                          <button type="button" class="btn btn-primary btn-tab">
+                            <i class="bi bi-trash text-danger"></i>
                           </button>
-                          <div class="modal fade" id="verticalycentered" tabindex="-1">
-                            <div class="modal-dialog modal-dialog-centered">
-                              <div class="modal-content">
-                                <div class="modal-header">
-                                  <h5 class="modal-title">Vertically Centered</h5>
-                                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                </div>
-                                <div class="modal-body">
-                                  Non omnis incidunt qui sed occaecati magni asperiores est mollitia. Soluta at et reprehenderit. Placeat autem numquam et fuga numquam. Tempora in facere consequatur sit dolor ipsum. Consequatur nemo amet incidunt est facilis. Dolorem neque recusandae quo sit molestias sint dignissimos.
-                                </div>
-                                <div class="modal-footer">
-                                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                  <button type="button" class="btn btn-primary">Save changes</button>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
                         </td>
                       </tr>
-                      <tr>
-                        <th scope="row"><a href="#"><img src="assets/img/product-5.jpg" alt=""></a></th>
-                        <td><a href="#" class="text-dark fw-bold">Sit unde debitis delectus repellendus</a></td>
-                        <td>9</td>
-                        <td>
-                          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#verticalycentered">
-                            <i class="bi bi-pencil-square"></i>
-                          </button>
-                          <div class="modal fade" id="verticalycentered" tabindex="-1">
-                            <div class="modal-dialog modal-dialog-centered">
-                              <div class="modal-content">
-                                <div class="modal-header">
-                                  <h5 class="modal-title">Vertically Centered</h5>
-                                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                </div>
-                                <div class="modal-body">
-                                  Non omnis incidunt qui sed occaecati magni asperiores est mollitia. Soluta at et reprehenderit. Placeat autem numquam et fuga numquam. Tempora in facere consequatur sit dolor ipsum. Consequatur nemo amet incidunt est facilis. Dolorem neque recusandae quo sit molestias sint dignissimos.
-                                </div>
-                                <div class="modal-footer">
-                                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                  <button type="button" class="btn btn-primary">Save changes</button>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </td>
-                      </tr>
+                     
                     </tbody>
                   </table>
 
