@@ -286,7 +286,7 @@
             <!-- End Profile Page Nav -->
 
             <li class="nav-item">
-                <a class="nav-link collapsed" href=" ">
+                <a class="nav-link collapsed" href="Abonnement.html">
                     <i class="bi bi-currency-dollar"></i>
                     <span>Abonnement</span>
                 </a>
@@ -294,7 +294,7 @@
             <!-- End F.A.Q Page Nav -->
 
             <li class="nav-item">
-                <a class="nav-link collapsed" href=" ">
+                <a class="nav-link collapsed" href="materials.html">
                     <i class="bx bx-dumbbell"></i>
                     <span>Material</span>
                 </a>
@@ -320,7 +320,7 @@
             <h1> Users </h1>
             <nav>
                 <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="#">Dashboard</a></li>
+                    <li class="breadcrumb-item"><a href="#">Home</a></li>
                     <li class="breadcrumb-item active">Users </li>
                 </ol>
             </nav>
@@ -342,13 +342,43 @@
 
                         </ul>
                     </div>
+
                     <h5 class="card-title">Users </h5>
+
 
                     <div class="card-body">
                         <div id="table" class="table-editable">
 
+                            <button type="button" id="add" class="btn btn-outline-dark" class="datatable-top" data-bs-toggle="modal" data-bs-target="#addmaterial">
+                                <i class="bi bi-plus-square"></i>
+                              </button>
+                            <div class="modal fade" id="addmaterial" tabindex="-1">
+                                <div class="modal-dialog modal-dialog-centered">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title">Add user</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <form action="">
+                                            <div class="modal-body">
+                                                <div class="col-md-12">
+                                                    <label for="inputName5" class="form-label">Numero</label>
+                                                    <input type="number" class="form-control" id="inputName1">
+                                                </div>
+                                                <div class="col-md-12">
+                                                    <label for="inputName5" class="form-label">Name</label>
+                                                    <input type="text" class="form-control" id="inputName1">
+                                                </div>
 
-                            <table class="table table-borderless table-responsive-md dataTable-selector text-center datatable" id="example">
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="submit" class="btn btn-success">Add</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <table class="table table-borderless table-responsive-md dataTable-selector  datatable" id="example">
                                 <thead>
                                     <tr class="table-primary">
                                         <th scope="col">Num</th>
@@ -365,19 +395,19 @@
                                         <td><span class="badge bg-success">Approved</span></td>
                                         <td>
 
-                                            <a href="#" class="table-link">
+                                            <a class="table-link" data-bs-toggle="modal" data-bs-target="#seemore">
 
                                                 <i class="bi bi-eye text-primary"></i>
 
                                                 </span>
                                             </a>
-                                            <a href="#" class="table-link">
+                                            <a class="table-link" data-bs-toggle="modal" data-bs-target="#modify">
 
 
                                                 <i class="bi bi-pencil text-success"></i>
                                                 </span>
                                             </a>
-                                            <a href="#" class="table-link danger">
+                                            <a class="table-link" data-bs-toggle="modal" data-bs-target="#delete">
 
                                                 <i class="bi bi-trash text-danger"></i>
                                                 </span>
@@ -386,50 +416,26 @@
 
                                     </tr>
 
-                                    <tr>
-                                        <th scope="row"><a href="#">2457</a></th>
-                                        <td><a class="table-name" href="profile.html" style="text-decoration: none;">Brandon Jacob</a></td>
-                                        <td><span class="badge bg-danger">Rejected</span></td>
-                                        <td>
-                                            <a href="#" class="table-link">
 
-                                                <i class="bi bi-eye "></i>
-
-                                                </span>
-                                            </a>
-                                            <a href="#" class="table-link">
-
-
-                                                <i class="bi bi-pencil"></i>
-                                                </span>
-                                            </a>
-                                            <a href="#" class="table-link danger">
-
-                                                <i class="bi bi-trash "></i>
-                                                </span>
-                                            </a>
-                                        </td>
-
-                                    </tr>
                                     <tr>
                                         <th scope="row"><a href="#">2457</a></th>
                                         <td><a class="table-name" href="profile.html" style="text-decoration: none;">Brandon Jacob</a> </td>
                                         <td><span class="badge bg-success">Approved</span></td>
                                         <td>
 
-                                            <a href="#" class="table-link">
+                                            <a class="table-link" data-bs-toggle="modal" data-bs-target="#seemore">
 
                                                 <i class="bi bi-eye text-primary"></i>
 
                                                 </span>
                                             </a>
-                                            <a href="#" class="table-link">
+                                            <a class="table-link" data-bs-toggle="modal" data-bs-target="#modify">
 
 
                                                 <i class="bi bi-pencil text-success"></i>
                                                 </span>
                                             </a>
-                                            <a href="#" class="table-link danger">
+                                            <a class="table-link" data-bs-toggle="modal" data-bs-target="#delete">
 
                                                 <i class="bi bi-trash text-danger"></i>
                                                 </span>
@@ -438,38 +444,64 @@
 
                                     </tr>
 
-                                    <tr>
-                                        <th scope="row"><a href="#">2457</a></th>
-                                        <td><a class="table-name" href="profile.html" style="text-decoration: none;">Brandon Jacob</a></td>
-                                        <td><span class="badge bg-danger">Rejected</span></td>
-                                        <td>
-                                            <a href="#" class="table-link">
 
-                                                <i class="bi bi-eye "></i>
-
-                                                </span>
-                                            </a>
-                                            <a href="#" class="table-link">
-
-
-                                                <i class="bi bi-pencil"></i>
-                                                </span>
-                                            </a>
-                                            <a href="#" class="table-link danger">
-
-                                                <i class="bi bi-trash "></i>
-                                                </span>
-                                            </a>
-                                        </td>
-
-                                    </tr>
                                 </tbody>
                             </table>
                         </div>
                     </div>
                 </div>
 
+                <div class="modal fade" id="modify" tabindex="-1">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title">Modify</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
 
+                            <div class="modal-body">
+
+                                <div class="col-md-12">
+                                    <label for="inputName5" class="form-label">Numero</label>
+                                    <input type="number" class="form-control" id="inputName1">
+                                </div>
+                                <div class="col-md-12">
+                                    <label for="inputName5" class="form-label">Name</label>
+                                    <input type="text" class="form-control" id="inputName1">
+                                </div>
+                                <div class="col-md-12">
+                                    <label for="inputName5" class="form-label">Abonnement</label>
+                                    <input type="text" class="form-control" id="inputName1">
+                                </div>
+
+
+
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-danger">Reset</button>
+                                <button type="submit" class="btn btn-success">Modify</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal fade" id="delete" tabindex="-1">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title">Delete</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                Are you sure that you want to delete?
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">No</button>
+                                <button type="submit" class="btn btn-success">Yes</button>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
